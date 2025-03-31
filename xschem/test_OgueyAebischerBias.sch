@@ -58,7 +58,7 @@ save all
 op
 remzerovec
 write test_OgueyAebischerBias.op.raw
-tran 10u .2
+tran 20u .2
 remzerovec
 write test_OgueyAebischerBias.raw
 plot vdd vbp vbn vbr xbias.vres

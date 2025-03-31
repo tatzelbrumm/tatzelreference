@@ -27,7 +27,7 @@ C {devices/title.sym} 160 -40 0 0 {name=l1 author="Christoph Maier"}
 C {reference.sym} 540 -340 0 0 {name=xdut}
 C {devices/gnd.sym} 380 -180 0 0 {name=l2 lab=0}
 C {devices/vsource.sym} 380 -450 0 1 {name=VDD value="dc 1.2 pwl(0 0 100m 1.2)" }
-C {devices/vsource.sym} 440 -270 0 1 {name=Voff value=0}
+C {devices/vsource.sym} 440 -270 0 1 {name=Voff value="dc 0 pwl(0 0 200m 0 200.01m 1.2 300m 1.2 300.01m 0)"}
 C {devices/lab_wire.sym} 470 -500 0 0 {name=l3 lab=vdd}
 C {devices/lab_wire.sym} 470 -320 0 0 {name=l5 lab=disable}
 C {devices/lab_wire.sym} 680 -360 0 0 {name=l6 lab=vbp}
@@ -44,11 +44,11 @@ save all
 op
 remzerovec
 write test_reference.op.raw
-tran 10u 0.5
+tran 20u 0.5
 remzerovec
 write test_referenceBias.raw
-plot vdd vbp vbn vbr xdut.xbias.vres
-plot v.xdut.xbias.vi1#branch v.xdut.xbias.vi4#branch v.xdut.xbias.viaux#branch
+plot vdd vbp vbn vbr xdut.xbias.vres xdut.xstart.vkick
+plot v.xdut.xbias.vi1#branch v.xdut.xbias.vi4#branch v.xdut.xbias.viaux#branch 0-vdd#branch
 .endc
 "}
 C {devices/code.sym} 110 -210 0 0 {name=TT_MODELS
