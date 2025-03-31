@@ -1,14 +1,13 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
 S {}
 E {}
 N 900 -400 920 -400 { lab=vss}
-N 920 -400 920 -100 { lab=vss}
+N 920 -160 920 -100 { lab=vss}
 N 560 -400 580 -400 { lab=vss}
-N 560 -400 560 -100 { lab=vss}
+N 560 -160 560 -100 { lab=vss}
 N 740 -490 740 -100 { lab=vss}
 N 720 -520 740 -520 { lab=vss}
 N 720 -520 720 -100 { lab=vss}
@@ -54,7 +53,7 @@ N 800 -580 970 -580 { lab=vbn}
 N 510 -780 560 -780 { lab=vdd}
 N 510 -100 560 -100 { lab=vss}
 N 840 -720 840 -660 { lab=vbp}
-N 640 -460 970 -460 { lab=vbr}
+N 840 -460 970 -460 { lab=vbr}
 N 900 -660 970 -660 { lab=vbp}
 N 580 -690 580 -650 { lab=#net1}
 N 580 -590 580 -460 { lab=vbr}
@@ -92,6 +91,13 @@ N 840 -400 860 -400 {}
 N 840 -320 860 -320 {}
 N 840 -240 860 -240 {}
 N 840 -160 860 -160 {}
+N 920 -400 920 -320 { lab=vss}
+N 560 -400 560 -320 { lab=vss}
+N 920 -320 920 -240 { lab=vss}
+N 560 -320 560 -240 { lab=vss}
+N 920 -240 920 -160 { lab=vss}
+N 560 -240 560 -160 { lab=vss}
+N 640 -460 840 -460 { lab=vbr}
 C {devices/title.sym} 160 -40 0 0 {name=l1 author="Christoph Maier"}
 C {sg13g2_pr/sg13_hv_nmos.sym} 880 -520 0 0 {name=M10
 l=1u

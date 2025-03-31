@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -9,7 +8,7 @@ T {H. J. Oguey and D. Aebischer, “CMOS current reference without resistance,�
 IEEE J. Solid-State Circuits, vol. 32, no. 7, pp. 1132–1135, Jul. 1997} 440 -170 0 0 0.3 0.3 {}
 N 540 -300 540 -200 { lab=0}
 N 540 -500 540 -380 { lab=vdd}
-N 380 -200 540 -200 { lab=0}
+N 440 -200 540 -200 { lab=0}
 N 380 -200 380 -180 { lab=0}
 N 380 -420 380 -200 { lab=0}
 N 380 -500 380 -480 { lab=vdd}
@@ -23,6 +22,7 @@ N 600 -340 680 -340 {
 lab=vbn}
 N 600 -360 680 -360 {
 lab=vbp}
+N 380 -200 440 -200 { lab=0}
 C {devices/title.sym} 160 -40 0 0 {name=l1 author="Christoph Maier"}
 C {reference.sym} 540 -340 0 0 {name=xdut}
 C {devices/gnd.sym} 380 -180 0 0 {name=l2 lab=0}
@@ -47,14 +47,14 @@ write test_reference.op.raw
 tran 10u 0.5
 remzerovec
 write test_referenceBias.raw
-plot vdd vbp vbn vbr xbias.vres
+plot vdd vbp vbn vbr xdut.xbias.vres
 plot v.xdut.xbias.vi1#branch v.xdut.xbias.vi4#branch v.xdut.xbias.viaux#branch
 .endc
 "}
 C {devices/code.sym} 110 -210 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
-value=".lib cornerMOShv.lib mos tt
+value=".lib cornerMOShv.lib mos_tt
 
 .param mc_mm_switch=0
 .param mc_pr_switch=1

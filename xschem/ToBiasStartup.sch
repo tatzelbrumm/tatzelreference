@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -73,21 +72,21 @@ N 580 -100 740 -100 { lab=vss}
 N 420 -100 580 -100 { lab=vss}
 C {devices/title.sym} 160 -40 0 0 {name=l1 author="Christoph Maier"}
 C {sg13g2_pr/sg13_hv_nmos.sym} 880 -160 0 0 {name=M24
-l=0.3u
+l=0.45u
 w=1u
 ng=1 m=1
 model=sg13_hv_nmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_hv_pmos.sym} 880 -480 0 0 {name=M22
-l=0.3u
+l=0.45u
 w=1u
 ng=1 m=1
 model=sg13_hv_pmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_hv_pmos.sym} 440 -480 0 1 {name=M25
-l=0.3u
+l=0.45u
 w=1u
 ng=1 m=1
 model=sg13_hv_pmos
@@ -98,14 +97,14 @@ C {devices/iopin.sym} 360 -540 0 1 {name=p2 lab=vdd}
 C {devices/iopin.sym} 960 -420 0 0 {name=p3 lab=vbp}
 C {devices/iopin.sym} 960 -340 0 0 {name=p4 lab=vbn}
 C {sg13g2_pr/sg13_hv_nmos.sym} 720 -160 0 0 {name=M23
-l=0.3u
+l=0.45u
 w=1u
 ng=1 m=1
 model=sg13_hv_nmos
 spiceprefix=X
 }
 C {sg13g2_pr/sg13_hv_pmos.sym} 720 -480 0 0 {name=M21
-l=0.3u
+l=0.45u
 w=1u
 ng=1 m=1
 model=sg13_hv_pmos

@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -30,14 +29,13 @@ N 340 -500 560 -500 { lab=vdd}
 N 560 -500 560 -380 { lab=vdd}
 N 220 -200 340 -200 { lab=vss}
 N 220 -500 340 -500 { lab=vdd}
-N 240 -320 280 -320 { lab=#net1}
 N 640 -420 700 -420 {
 lab=vbp}
 N 660 -260 700 -260 {
 lab=vbn}
 N 640 -240 700 -240 {
 lab=vbr}
-N 220 -320 240 -320 {}
+N 220 -320 280 -320 {lab=disable}
 C {devices/title.sym} 160 -40 0 0 {name=l1 author="Christoph Maier"}
 C {OgueyAebischerBias.sym} 560 -340 0 0 {name=xbias}
 C {ToBiasStartup.sym} 340 -340 0 0 {name=xstart}

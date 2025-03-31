@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -28,7 +27,7 @@ N 540 -300 540 -200 { lab=0}
 N 540 -500 540 -380 { lab=vdd}
 N 540 -500 760 -500 { lab=vdd}
 N 760 -500 760 -380 { lab=vdd}
-N 380 -200 540 -200 { lab=0}
+N 440 -200 540 -200 { lab=0}
 N 380 -200 380 -180 { lab=0}
 N 380 -420 380 -200 { lab=0}
 N 380 -500 380 -480 { lab=vdd}
@@ -36,6 +35,7 @@ N 380 -500 540 -500 { lab=vdd}
 N 440 -320 440 -300 { lab=disable}
 N 440 -240 440 -200 { lab=0}
 N 440 -320 480 -320 { lab=disable}
+N 380 -200 440 -200 { lab=0}
 C {devices/title.sym} 160 -40 0 0 {name=l1 author="Christoph Maier"}
 C {OgueyAebischerBias.sym} 760 -340 0 0 {name=xbias}
 C {ToBiasStartup.sym} 540 -340 0 0 {name=xstart}
@@ -58,7 +58,7 @@ save all
 op
 remzerovec
 write test_OgueyAebischerBias.op.raw
-tran 10u 2
+tran 10u .2
 remzerovec
 write test_OgueyAebischerBias.raw
 plot vdd vbp vbn vbr xbias.vres
@@ -68,7 +68,7 @@ plot v.xbias.vi1#branch v.xbias.vi4#branch v.xbias.viaux#branch
 C {devices/code.sym} 110 -210 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
-value=".lib cornerMOShv.lib mos tt
+value=".lib cornerMOShv.lib mos_tt
 
 .param mc_mm_switch=0
 .param mc_pr_switch=1
