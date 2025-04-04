@@ -1,4 +1,5 @@
-v {xschem version=3.4.6 file_version=1.2}
+v {xschem version=3.4.5 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -46,7 +47,7 @@ remzerovec
 write test_reference.op.raw
 tran 20u 0.5
 remzerovec
-write test_referenceBias.raw
+write test_reference.raw
 plot vdd vbp vbn vbr xdut.xbias.vres xdut.xstart.vkick
 plot v.xdut.xbias.vi1#branch v.xdut.xbias.vi4#branch v.xdut.xbias.viaux#branch 0-vdd#branch
 .endc
